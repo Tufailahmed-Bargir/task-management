@@ -49,6 +49,7 @@ const {username, email, password}=data;
         res.json({
             msg:'user alreday exist! login instead'
         })
+        return
     }
 
     const hashPassword = await bycrypt.hash(password, 10)
